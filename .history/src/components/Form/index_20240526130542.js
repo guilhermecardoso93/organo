@@ -14,17 +14,16 @@ export function Form() {
     " Inovação e Gestão",
   ];
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     console.log("Oi")
   }
   return (
     <section className="form">
       <form onSubmit={handleSubmit}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <Input label="Nome" obrigatorio placeholder="Digite seu nome..." />
-        <Input label="Cargo" obrigatorio placeholder="Digite seu cargo..." />
-        <Input label="Imagem" obrigatorio placeholder="Digite seu nome" />
+        <Input label="Nome" placeholder="Digite seu nome..." />
+        <Input label="Cargo" placeholder="Digite seu cargo..." />
+        <Input label="Imagem" placeholder="Digite seu nome" />
         <ListDropDown itens={times} label="Times" />
         <Button> Criar Card</Button>
       </form>

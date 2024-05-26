@@ -1,17 +1,17 @@
-.campo-texto {
+.list-dropdown {
   display: flex;
   flex-direction: column;
   margin: 24px 0;
 }
 
-.campo-texto label {
+.list-dropdown label {
   display: block;
   margin-bottom: 8px;
   font-size: 24px;
   font-weight: semi-bold;
 }
 
-.campo-texto input {
+.list-dropdown select {
   background-color: #fff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
