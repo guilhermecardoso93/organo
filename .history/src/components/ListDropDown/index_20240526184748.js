@@ -1,13 +1,14 @@
 import "./styles.css";
 
-export function ListDropDown({ label, itens, value, valueChange, required }) {
+export function ListDropDown({ label, itens, value, valueChange,required }) {
   return (
-    <div className="list-dropdown">
+    <div className='list-dropdown'>
       <label>{label}</label>
-      <select
+      <select 
         required={required}
         value={value}
-        onChange={(event) => valueChange(event.target.value)}
+        onChange={event => valueChange(event.target.value)}
+        
       >
         {itens.map((item, index) => {
           return <option key={index}>{item}</option>;

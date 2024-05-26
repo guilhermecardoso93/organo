@@ -1,8 +1,10 @@
 import "./styles.css";
 
-export function Input({ label, placeholder, obrigatorio, value, valueChange }) {
+export function Input({ label, placeholder, obrigatorio }) {
+  let value = ''
   function handleTap(event) {
-    valueChange(event.target.value);
+    value = event.target.value
+    console.log(value);
   }
 
   return (
@@ -12,7 +14,6 @@ export function Input({ label, placeholder, obrigatorio, value, valueChange }) {
         placeholder={placeholder}
         required={obrigatorio}
         onChange={handleTap}
-        value={value}
       />
     </div>
   );

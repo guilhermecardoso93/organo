@@ -1,25 +1,22 @@
 import { useState } from "react";
 import { Banner } from "./components/Banner";
 import { Form } from "./components/Form";
-import { Times } from "./components/Times";
 
-export default function App(handleChangeColaboradores) {
+export default function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   function handleNewColaboradores(colaborador) {
-    setColaboradores([...colaboradores], colaborador);
-    console.log(setColaboradores);
+    console.log(colaborador)
   }
 
   return (
-    <div className="app">
+    <div>
       <Banner />
       <Form
         handleChangeColaboradores={(colaborador) =>
           handleNewColaboradores(colaborador)
         }
       />
-      <Times />
     </div>
   );
 }

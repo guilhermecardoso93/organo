@@ -8,13 +8,14 @@ import "./styles.css";
 
 export function Form(props) {
   const times = [
+    "Escolha um time",
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
 
   const [name, setName] = useState("");

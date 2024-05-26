@@ -14,7 +14,6 @@ export function Form(props) {
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
 
   const [name, setName] = useState("");

@@ -1,0 +1,11 @@
+.time-container {
+  text-align: center;
+  padding: 32px;
+  background-color: #d9f7e9;
+  border-radius: 20px;
+}
+
+.time-container h3 {
+  font-size: 2rem;
+  border-bottom: 4px solid #57c278;
+}

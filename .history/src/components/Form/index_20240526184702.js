@@ -8,13 +8,13 @@ import "./styles.css";
 
 export function Form(props) {
   const times = [
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
 
   const [name, setName] = useState("");
@@ -52,6 +52,7 @@ export function Form(props) {
           valueChange={(value) => setImagem(value)}
         />
         <ListDropDown
+          placeholder='Escolha um Time'
           itens={times}
           label="Times"
           value={teams}

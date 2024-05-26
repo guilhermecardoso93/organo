@@ -1,8 +1,8 @@
 import "./styles.css";
 
-export function Input({ label, placeholder, obrigatorio, value, valueChange }) {
+export function Input({ label, placeholder, obrigatorio, value }) {
   function handleTap(event) {
-    valueChange(event.target.value);
+    value.valueChange(event.target.value);
   }
 
   return (

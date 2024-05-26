@@ -8,7 +8,7 @@ export default function App(handleChangeColaboradores) {
 
   function handleNewColaboradores(colaborador) {
     setColaboradores([...colaboradores], colaborador);
-    console.log(setColaboradores);
+    console.log(setColaboradores)
   }
 
   return (

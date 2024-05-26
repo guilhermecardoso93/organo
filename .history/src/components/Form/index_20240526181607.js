@@ -1,30 +1,27 @@
 import { useState } from "react";
-
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { ListDropDown } from "../ListDropDown";
-
 import "./styles.css";
 
-export function Form(props) {
+export function Form() {
+  const [name, setName] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+
   const times = [
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
-
-  const [name, setName] = useState("");
-  const [cargo, setCargo] = useState("");
-  const [imagem, setImagem] = useState("");
-  const [teams, setTeams] = useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.handleChangeColaboradores({ name, cargo, imagem, teams });
+    console.log("Oi");
   }
   return (
     <section className="form">
@@ -51,12 +48,7 @@ export function Form(props) {
           value={imagem}
           valueChange={(value) => setImagem(value)}
         />
-        <ListDropDown
-          itens={times}
-          label="Times"
-          value={teams}
-          valueChange={(value) => setTeams(value)}
-        />
+        <ListDropDown itens={times} label="Times" />
         <Button> Criar Card</Button>
       </form>
     </section>

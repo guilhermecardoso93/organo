@@ -2,7 +2,7 @@ import "./styles.css";
 
 export function Input({ label, placeholder, obrigatorio, value, valueChange }) {
   function handleTap(event) {
-    valueChange(event.target.value);
+    value.valueChange(event.target.value);
   }
 
   return (

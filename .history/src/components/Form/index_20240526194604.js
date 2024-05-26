@@ -8,6 +8,7 @@ import "./styles.css";
 
 export function Form(props) {
   const times = [
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",

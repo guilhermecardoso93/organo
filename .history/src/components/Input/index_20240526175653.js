@@ -1,8 +1,13 @@
+import { useState } from "react";
 import "./styles.css";
 
-export function Input({ label, placeholder, obrigatorio, value, valueChange }) {
+export function Input({ label, placeholder, obrigatorio }) {
+  let [value, setValue] = useState("");
+
   function handleTap(event) {
-    valueChange(event.target.value);
+    const newValue = event.target.value;
+    setValue(newValue);
+    console.log(value);
   }
 
   return (

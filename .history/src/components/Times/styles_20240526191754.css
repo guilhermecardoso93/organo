@@ -1,0 +1,15 @@
+.times-container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 80px 0;
+  overflow: hidden;
+}
+
+.times-container-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}

@@ -1,30 +1,28 @@
 import { useState } from "react";
-
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { ListDropDown } from "../ListDropDown";
-
 import "./styles.css";
 
-export function Form(props) {
+export function Form() {
+  const [value, setValue] = useState("");
+  const [name, setName] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImage] = useState("");
+
   const times = [
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
-
-  const [name, setName] = useState("");
-  const [cargo, setCargo] = useState("");
-  const [imagem, setImagem] = useState("");
-  const [teams, setTeams] = useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.handleChangeColaboradores({ name, cargo, imagem, teams });
+    console.log("Oi");
   }
   return (
     <section className="form">
@@ -34,29 +32,21 @@ export function Form(props) {
           label="Nome"
           obrigatorio
           placeholder="Digite seu nome..."
-          value={name}
-          valueChange={(value) => setName(value)}
+          valueChange={(value) => setValue(value)}
         />
         <Input
           label="Cargo"
           obrigatorio
           placeholder="Digite seu cargo..."
-          value={cargo}
-          valueChange={(value) => setCargo(value)}
+          valueChange={(value) => setValue(value)}
         />
         <Input
           label="Imagem"
           obrigatorio
           placeholder="Digite seu nome"
-          value={imagem}
-          valueChange={(value) => setImagem(value)}
+          valueChange={(value) => setValue(value)}
         />
-        <ListDropDown
-          itens={times}
-          label="Times"
-          value={teams}
-          valueChange={(value) => setTeams(value)}
-        />
+        <ListDropDown itens={times} label="Times" />
         <Button> Criar Card</Button>
       </form>
     </section>

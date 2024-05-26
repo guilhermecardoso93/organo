@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Banner } from "./components/Banner";
 import { Form } from "./components/Form";
-import { Times } from "./components/Times";
 
 export default function App(handleChangeColaboradores) {
   const [colaboradores, setColaboradores] = useState([]);
 
   function handleNewColaboradores(colaborador) {
     setColaboradores([...colaboradores], colaborador);
-    console.log(setColaboradores);
+    console.log(setColaboradores)
   }
 
   return (
@@ -19,7 +18,6 @@ export default function App(handleChangeColaboradores) {
           handleNewColaboradores(colaborador)
         }
       />
-      <Times />
     </div>
   );
 }

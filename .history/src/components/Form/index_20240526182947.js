@@ -6,15 +6,15 @@ import { ListDropDown } from "../ListDropDown";
 
 import "./styles.css";
 
-export function Form(props) {
+export function Form() {
   const times = [
+    "Programação",
     "Front-End",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
     " Inovação e Gestão",
-    "Programação"
   ];
 
   const [name, setName] = useState("");
@@ -24,7 +24,7 @@ export function Form(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.handleChangeColaboradores({ name, cargo, imagem, teams });
+    console.log(name, cargo, imagem, teams);
   }
   return (
     <section className="form">
@@ -52,9 +52,9 @@ export function Form(props) {
           valueChange={(value) => setImagem(value)}
         />
         <ListDropDown
-          itens={times}
+          itens={teams}
           label="Times"
-          value={teams}
+          value={times}
           valueChange={(value) => setTeams(value)}
         />
         <Button> Criar Card</Button>
