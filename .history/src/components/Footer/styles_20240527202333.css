@@ -1,0 +1,19 @@
+footer {
+  background-color: #6278f7;
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+}
+
+footer .social {
+  display: flex;
+  gap: 20px;
+}
+
+footer p {
+  font-size: 2rem;
+}

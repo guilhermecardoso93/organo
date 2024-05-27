@@ -1,0 +1,14 @@
+footer {
+  background-color: #6278f7;
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+footer:first-child div {
+  display: flex;
+  gap: 10px;
+}

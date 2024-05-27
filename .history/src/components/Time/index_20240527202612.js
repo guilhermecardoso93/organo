@@ -15,7 +15,6 @@ export function Time(props) {
             cargo={colaborador.cargo}
             imagem={colaborador.imagem}
             corPrimaria={props.corPrimaria}
-            key={colaborador.nome}
           />
         ))}
       </div>

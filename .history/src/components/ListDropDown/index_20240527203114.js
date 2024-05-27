@@ -9,9 +9,8 @@ export function ListDropDown({ label, itens, valor, valueChange, required }) {
         required={required}
         value={valor}
       >
-        <option value=''></option>
         {itens.map((item) => {
-          return <option key={item}>{item}</option>;
+          return <option key={item} value=''>{item}</option>;
         })}
       </select>
     </div>

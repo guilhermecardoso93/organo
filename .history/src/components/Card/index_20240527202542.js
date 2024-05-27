@@ -1,9 +1,11 @@
 import "./styles.css";
 
-export function Card({ nome, cargo, imagem, corPrimaria }) {
+export function Card({ nome, cargo, imagem,corPrimaria }) {
   return (
     <div className="colaborador">
-      <div className="cabecalho" style={{ backgroundColor: corPrimaria }}>
+      <div className="cabecalho"
+        style={{backgroundColor: corPrimaria}}
+      >
         <img src={imagem} alt={nome} />
       </div>
       <div className="rodape">
