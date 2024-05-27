@@ -1,39 +1,38 @@
 import { useState } from "react";
 import { Banner } from "./components/Banner";
 import { Form } from "./components/Form";
-import { Time } from "./components/Time";
+import { Times } from "./components/Times";
 
-import "./App.css";
 export default function App(handleChangeColaboradores) {
   const [colaboradores, setColaboradores] = useState([]);
   const times = [
     {
-      nome: "Front-End",
+      name: "Front-End",
       corPrimaria: "#82CFFA",
       corSecundaria: "#E8F8FF",
     },
     {
-      nome: "Data Sciense",
+      name: "Data Sciense",
       corPrimaria: "#A6D157",
       corSecundaria: "#F0F8E2",
     },
     {
-      nome: "Devops",
+      name: "Devops",
       corPrimaria: "#E06B69",
       corSecundaria: "#FDE7E8",
     },
     {
-      nome: "UX e Design",
+      name: "UX e Design",
       corPrimaria: "#D86EBF",
       corSecundaria: "#FAE5F5",
     },
     {
-      nome: "Mobile",
+      name: "Mobile",
       corPrimaria: "#FEBA05",
       corSecundaria: "#FFF5D9",
     },
     {
-      nome: "Inovação e Gestão",
+      name: "Inovação e Gestão",
       corPrimaria: "#FF8A29",
       corSecundaria: "#FFEEDF",
     },
@@ -41,39 +40,23 @@ export default function App(handleChangeColaboradores) {
       nome: "Programação",
       corPrimaria: "#57C278",
       corSecundaria: "#D9F7E9",
-    },
-  ];
+    },]
 
   function handleNewColaboradores(colaborador) {
-    console.log(colaborador);
-    setColaboradores([...colaboradores, colaborador]);
+    setColaboradores([...colaboradores], colaborador);
+    console.log(setColaboradores);
   }
 
   return (
     <div className="app">
       <Banner />
       <Form
-        times={times.map((time) => time.nome)}
+      times= {times.map(time => time.name)}
         handleChangeColaboradores={(colaborador) =>
           handleNewColaboradores(colaborador)
         }
       />
-      <div className="times-container-main">
-        <h2>Minha Organização</h2>
-        <div className="times-container-list">
-          {times.map((time) => (
-            <Time
-              key={time.nome}
-              nome={time.nome}
-              corPrimaria={time.corPrimaria}
-              corSecundaria={time.corSecundaria}
-              colaboradores={colaboradores.filter(
-                (colaborador) => colaborador.time === time.nome
-              )}
-            />
-          ))}
-        </div>{" "}
-      </div>
+      <Times />
     </div>
   );
 }

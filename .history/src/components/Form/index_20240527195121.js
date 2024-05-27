@@ -14,7 +14,7 @@ export function Form(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.handleChangeColaboradores({
+    props.handleNewColaboradores({
       nome,
       cargo,
       imagem,

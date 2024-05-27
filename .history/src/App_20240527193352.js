@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Banner } from "./components/Banner";
 import { Form } from "./components/Form";
-import { Time } from "./components/Time";
+import { Time } from "./components/Times/components/Time";
 
 import "./App.css";
 export default function App(handleChangeColaboradores) {

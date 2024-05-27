@@ -2,7 +2,7 @@ import "./styles.css";
 
 export function ListDropDown({ label, itens, value, valueChange, required }) {
   return (
-    <div className="list-dropdown">
+    <div className="lista-suspensa">
       <label>{label}</label>
       <select
         onChange={(evento) => valueChange(evento.target.value)}

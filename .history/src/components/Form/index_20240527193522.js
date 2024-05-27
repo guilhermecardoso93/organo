@@ -10,20 +10,18 @@ export function Form(props) {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
-  const [time, setTime] = useState([]);
+  const [teams, setTeams] = useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.handleChangeColaboradores({
-      nome,
-      cargo,
-      imagem,
-      time,
-    });
+    props.handleChangeColaboradores({ nome, cargo, imagem, teams });
     setNome("");
     setCargo("");
     setImagem("");
-    setTime("");
+    setTeams("");
+    console.log(
+      props.handleChangeColaboradores({ nome, cargo, imagem, teams })
+    );
   }
   return (
     <section className="form">
@@ -54,8 +52,8 @@ export function Form(props) {
           obrigatorio
           itens={props.times}
           label="Times"
-          value={time}
-          valueChange={(value) => setTime(value)}
+          value={teams}
+          valueChange={(value) => setTeams(value)}
         />
         <Button> Criar Card</Button>
       </form>
